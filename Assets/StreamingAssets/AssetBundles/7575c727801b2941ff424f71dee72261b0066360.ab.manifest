@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1849159595
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b14ddd1c02dcbaa729e36b37d1bf95ed
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 27295f96fcdc2b917bd061e8817c7e02
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/MODEL/FillObject.prefab
+Dependencies: []

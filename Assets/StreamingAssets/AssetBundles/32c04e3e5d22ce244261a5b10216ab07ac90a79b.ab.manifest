@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 1947211660
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 985c675f02e57bf97ee30522e9787e11
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/Capsule.mat
+Dependencies:
+- D:/HarewareTools/Assets/StreamingAssets/AssetBundles/10ecf942db5a91585d598fceef510bfeb343bd9a.ab

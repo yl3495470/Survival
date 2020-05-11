@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 3455027133
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ec27af1c2ca9104405fc937e8aa03f09
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e28924f2c2393e9fe54ed730e71f47c7
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/Plane.prefab
+Dependencies:
+- D:/HarewareTools/Assets/StreamingAssets/AssetBundles/32c04e3e5d22ce244261a5b10216ab07ac90a79b.ab

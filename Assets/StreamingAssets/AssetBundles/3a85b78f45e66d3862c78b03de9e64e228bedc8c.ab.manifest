@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 3240549680
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 55dc9a6fe880671cc47963dabb44ea8f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e25fd90d003022357adb51549b92a99d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4040bd638571b5142a66dcf3416a444c, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/Cube.prefab
+Dependencies:
+- D:/HarewareTools/Assets/StreamingAssets/AssetBundles/782098d40ab0bb691b99a9d1965cfb0101cdc60e.ab

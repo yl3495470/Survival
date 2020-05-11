@@ -1,0 +1,30 @@
+local util = require 'xlua.util';
+
+Player = {
+    HP = 100;
+    SP = 100;
+    Speed = 1.0;
+
+    Direct = 
+    {
+        Left = false,
+        Right = false,
+        Up = false,
+        Down = false,
+    }
+}
+
+function Player:new()
+    local o = {};
+    setmetatable(o, self);
+    self.__index = self;    
+
+    return o;
+end
+
+function Player:Move()
+    local Offset = { x = 0, y = 0 }
+
+    Offset.x = self[Left] and -1 or 0 + self[Right] and 1 or 0;
+    Offset.y = self[Down] and -1 or 0 + self[Up] and 1 or 0;
+end

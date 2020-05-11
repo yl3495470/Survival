@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3073934571
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 47a4248e1722dbc9c4d5a6ecae32bd58
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 27295f96fcdc2b917bd061e8817c7e02
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/FX/FillObject.prefab
+Dependencies: []

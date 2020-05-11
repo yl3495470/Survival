@@ -1,0 +1,17 @@
+local fishManger = require 'FishManger'
+
+function awake()
+    print("GameManger Awake Now Web");
+end
+
+function start()
+    print("GameManger Start Fixed");
+end
+
+function update()
+
+end
+
+function ondestroy()
+    print("GameManger OnDestroy");
+end

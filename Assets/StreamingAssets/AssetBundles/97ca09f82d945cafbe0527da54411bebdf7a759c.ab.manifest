@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 351716267
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e9ef3b22978c5a2200d5975cf5561e7c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 27295f96fcdc2b917bd061e8817c7e02
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/ANIMATION/FillObject.prefab
+Dependencies: []

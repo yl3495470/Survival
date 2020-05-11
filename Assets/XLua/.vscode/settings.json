@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/.mat": true,
+        "**/*.bat": true,
+        "**/*.cs": true,
+        "**/*.doc": true,
+        "**/*.md": true,
+        "**/*.meta": true,
+        "**/*.prefab": true,
+        "**/*.pub": true,
+        "**/*.unity": true,
+        "**/*.xml": true
+    }
+}

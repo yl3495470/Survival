@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 4109384209
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 00abe865d7e21c878d3c8184bec4b932
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/XLua/MyLua/Resources/Player.lua.txt
+Dependencies: []

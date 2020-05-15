@@ -3,28 +3,47 @@ local util = require 'xlua.util';
 Player = {
     HP = 100;
     SP = 100;
-    Speed = 1.0;
+    Speed = 5.0;
+    Transform = nil;
+    BodyTran = nil;
+    CameraTran = nil;
 
     Direct = 
     {
-        Left = false,
-        Right = false,
-        Up = false,
-        Down = false,
-    }
+        HoriAxis = 0,
+        VertAxis = 0,
+        Angle = 0,
+    };
 }
 
-function Player:new()
+function Player:new(go)
     local o = {};
     setmetatable(o, self);
-    self.__index = self;    
+    self.__index = self;
+
+    local csharpPlayer = go:GetComponent(typeof(CS.Player))
+
+    o.Transform = csharpPlayer.selfTran;
+    o.BodyTran = csharpPlayer.bodyTran;
+    o.CameraTran = csharpPlayer.cameraTran;
 
     return o;
 end
 
-function Player:Move()
-    local Offset = { x = 0, y = 0 }
+function Player:Move(move)        
+    local isEqual = self.Direct.Angle == move.Angle;
 
-    Offset.x = self[Left] and -1 or 0 + self[Right] and 1 or 0;
-    Offset.y = self[Down] and -1 or 0 + self[Up] and 1 or 0;
+    self.Direct.HoriAxis = move.HoriAxis;
+    self.Direct.VertAxis = move.VertAxis;
+
+    local X = self.Direct.HoriAxis * CS.UnityEngine.Time.deltaTime * self.Speed;
+    local Y = self.Direct.VertAxis * CS.UnityEngine.Time.deltaTime * self.Speed;    
+    self.Transform:Translate(X, 0, Y);    
+
+    if not isEqual then
+        self.Direct.Angle = move.Angle;
+        self.BodyTran.localEulerAngles = CS.UnityEngine.Vector3(0, self.Direct.Angle, 0);
+    end    
 end
+
+return Player;

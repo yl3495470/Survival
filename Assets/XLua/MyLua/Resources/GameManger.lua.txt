@@ -1,7 +1,13 @@
-local fishManger = require 'FishManger'
+require 'Player' 
 
-function awake()
-    print("GameManger Awake Now Web");
+local mPlayer = nil;
+
+function init()
+    CS.ResourceManger.LoadGameObject('Assets.Resources.PREFAB.Player.prefab', function (go)
+        go.transform.localScale = CS.UnityEngine.Vector3(1,1,1);
+        go.transform.position = CS.UnityEngine.Vector3(0,0,0);
+        mPlayer = Player:new(go);
+    end);    
 end
 
 function start()
@@ -14,4 +20,12 @@ end
 
 function ondestroy()
     print("GameManger OnDestroy");
+end
+
+function moveFun(move)
+    if mPlayer == nil then
+        return ;
+    end
+
+    mPlayer:Move(move);
 end

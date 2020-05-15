@@ -10,5 +10,6 @@
         "**/*.pub": true,
         "**/*.unity": true,
         "**/*.xml": true
-    }
+    },
+    "git.ignoreLimitWarning": true
 }

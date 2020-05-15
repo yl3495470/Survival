@@ -1,0 +1,45 @@
+
+                 Fleck Map Generator
+
+About:
+
+	Light weight map generator, create topdown map with only one click.
+
+
+Copy Right:
+
+	Designed by éª¹ÏMoenen. QQ 1182032752  Twitter @_Moenen
+	You own the maps generated with this tool.
+	You can not sell this tool.
+
+
+How To Use:
+
+    1, Click "Tools --> Fleck Map Generator" in the navigation bar.
+       The "Fleck Map Generator" window will be next to the inspector.
+
+    3, Click "Fresh" button in the window until you get a map you like.
+       You can see the current map at the top of the window.
+
+    4, Change the settings in "Modify" panel if you want.
+       You will see the changes immediately.
+
+    5, Click "Save Json" in "Export" panel to get a json file. 
+       You can open this json file by using the "Open" button in "Modify" panel.
+
+    6, Click "Save Text" in "Export" panel to get a txt file.
+       This txt file is very easy to read with your script.
+
+    7, Click "Save Prefab" in "Export" panel to get a prefab for this map.
+       Make sure you have choosed at least one prefab in the "Modify" panel, or the map prefab will be empty.
+
+	8, To generate a map at runtime, see the demo script.
+
+
+Change Log:
+	v1.0.0 Basic Stuff
+	v1.1.0 New features: altitude for mountains. Birth Points.
+
+
+
+

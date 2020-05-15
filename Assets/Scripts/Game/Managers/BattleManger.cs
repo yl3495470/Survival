@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using XLua;
 using System;
 using System.IO;
+using DG.Tweening;
 using Tangzx.ABSystem;
 
 public class BattleManger : Singleton<BattleManger>
 {
-    private Action _luaStart;
     private Action _luaUpdate;
     private Action _luaOnDestroy;
+    private Action<Move> _luaUpdatePos;
 
     internal static LuaEnv luaEnv = new LuaEnv(); //all lua behaviour shared one luaenv only!
     internal static float lastGCTime = 0;
@@ -20,6 +21,9 @@ public class BattleManger : Singleton<BattleManger>
 
     AssetBundleManager manager;
 
+    private Move _move = new Move();
+    private float _horiAxis = 0;
+    private float _vertAxis = 0;
 
     public void Init()
     {
@@ -46,22 +50,15 @@ public class BattleManger : Singleton<BattleManger>
         
         luaEnv.DoString(luaStr.text, "ABS", scriptEnv);
 
-        Action luaAwake = scriptEnv.Get<Action>("awake");
-        scriptEnv.Get("start", out _luaStart);
+        Action luaInit = scriptEnv.Get<Action>("init");
         scriptEnv.Get("update", out _luaUpdate);
         scriptEnv.Get("ondestroy", out _luaOnDestroy);
+        scriptEnv.Get("moveFun", out _luaUpdatePos);
 
-        if (luaAwake != null)
+        if (luaInit != null)
         {
-            luaAwake();
+            luaInit();
         }
-    }
-
-    void Start()
-    {
-        Debug.Log("Start once");
-        if (_luaStart != null)
-            _luaStart();
     }
 
     void Update()
@@ -69,11 +66,27 @@ public class BattleManger : Singleton<BattleManger>
         if (_luaUpdate != null)
         {
             _luaUpdate();
+            UpdatePos();
         }
         if (Time.time - BattleManger.lastGCTime > GCInterval)
         {
             luaEnv.Tick();
             BattleManger.lastGCTime = Time.time;
+        }
+    }
+
+    private void UpdatePos()
+    {
+        _move.HoriAxis = Input.GetAxis("Horizontal");
+        _move.VertAxis = Input.GetAxis("Vertical");
+
+        Debug.Log(_move.HoriAxis + "," + _move.VertAxis);
+        if(_move.HoriAxis != 0 || _move.VertAxis != 0)
+            _move.Angle = Mathf.Rad2Deg * Mathf.Atan2(_move.HoriAxis, _move.VertAxis);
+
+        if (_luaUpdatePos != null)
+        {
+            _luaUpdatePos(_move);
         }
     }
 
@@ -85,7 +98,6 @@ public class BattleManger : Singleton<BattleManger>
         }
         _luaOnDestroy = null;
         _luaUpdate = null;
-        _luaStart = null;
         scriptEnv.Dispose();
     }
 }

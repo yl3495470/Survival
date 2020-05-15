@@ -12,7 +12,7 @@ public class ResourceManger : Singleton<ResourceManger>
 {
     public AssetBundleManager AbManager;
 
-    private const string urlParentPath = "http://118.25.125.147:80/Snake/AssetBundles/";
+    private const string urlParentPath = "http://118.25.125.147:80/Survival/AssetBundles/";
 
 
     private Dictionary<string, Hash128> localHash = new Dictionary<string, Hash128>();
